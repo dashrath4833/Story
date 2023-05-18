@@ -11,7 +11,7 @@ public class QBIntegration {
             cust = (restResourceJson)JSON.deserialize(res.getBody(), restResourceJson.class);
 
 			System.debug('Limits.getCallouts - '+ Limits.getCallouts());
-			System.debug('Limits.getLimitCallouts - '+ Limits.getLimitCallouts());            
+			System.debug('Limits.getLimitCllouts - '+ Limits.getLimitCallouts());            
             List<Account> accountList = [select id, name,ParentId,Customer_Id__c,Website,Phone,ShippingStreet,
                                          ShippingPostalCode,ShippingCountry,ShippingCity,BillingPostalCode,BillingStreet,BillingCountry,
                                          BillingCity,Description from Account where Customer_Id__c = :cust.Customer.id];
