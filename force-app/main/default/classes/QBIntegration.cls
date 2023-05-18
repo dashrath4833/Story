@@ -9,8 +9,6 @@ public class QBIntegration {
             HttpResponse res = CalloutController.calloutMethod(endPointURL,'GET',headersMap,'', true, false);
             restResourceJson cust = new restResourceJson();
             cust = (restResourceJson)JSON.deserialize(res.getBody(), restResourceJson.class);
-
-			System.debug('mits.getallouts - '+ Limits.getCallouts());
 			System.debug('Limits.getLmitCllouts - '+ Limits.getLimitCallouts());            
             List<Account> accountList = [select id, name,ParentId,Customer_Id__c,Website,Phone,ShippingStreet,
                                          ShippingPostalCode,ShippingCountry,ShippingCity,BillingPostalCode,BillingStreet,BillingCountry,
