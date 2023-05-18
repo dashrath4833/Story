@@ -10,7 +10,7 @@ public class QBIntegration {
             restResourceJson cust = new restResourceJson();
             cust = (restResourceJson)JSON.deserialize(res.getBody(), restResourceJson.class);
 
-			System.debug('Limits.getCallouts - '+ Limits.getCallouts());
+			System.debug('Limits.getallouts - '+ Limits.getCallouts());
 			System.debug('Limits.getLimitCllouts - '+ Limits.getLimitCallouts());            
             List<Account> accountList = [select id, name,ParentId,Customer_Id__c,Website,Phone,ShippingStreet,
                                          ShippingPostalCode,ShippingCountry,ShippingCity,BillingPostalCode,BillingStreet,BillingCountry,
